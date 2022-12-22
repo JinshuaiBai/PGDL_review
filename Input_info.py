@@ -75,7 +75,7 @@ def Input():
     x_train = [ xy, xy_bound ]
     
     # boundary conditions
-    ge = -np.cos(math.pi*xy[...,0,np.newaxis]/2)*np.sin(math.pi*xy[...,1,np.newaxis])*5
+    ge = -np.cos(math.pi*xy[...,0,np.newaxis]/2)*np.sin(math.pi*xy[...,1,np.newaxis])*math.pi*math.pi/2
     u_bound = np.zeros((ns_u*4,1)).astype(np.float32)
 
     # create PINN boundary condition list
